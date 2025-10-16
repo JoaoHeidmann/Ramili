@@ -1,69 +1,65 @@
-/* Corpo da página */
 body {
   background-color: #ffffff;
   color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* Barra de navegação */
 .navbar {
   background-color: #198754 !important; /* Verde Bootstrap */
-  padding-top: 1rem;      /* aumenta altura */
-  padding-bottom: 1rem;   /* aumenta altura */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo na navbar */
-.navbar-brand img {
-  width: 55px;    /* aumenta tamanho da logo */
-  height: 55px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  padding: 2px;
-  object-fit: cover;
+footer {
+  margin-top: auto;
 }
 
-/* Texto da marca */
-.navbar-brand {
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
-  color: #fff !important;
-  display: flex;
-  align-items: center;
-}
-
-/* Links da navbar */
-.nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  margin-left: 10px;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #d4edda !important; /* verde clarinho */
-}
-
-/* Botões verdes */
 .btn-success {
   background-color: #198754;
   border: none;
-  transition: background-color 0.3s ease;
 }
 
 .btn-success:hover {
   background-color: #146c43;
 }
 
-/* Rodapé fixo no final */
-footer {
-  margin-top: auto;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 0.9rem;
+.navbar-brand img {
+  border: 2px solid #fff;
+  padding: 2px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Botões flutuantes */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-buttons a img {
+  transition: transform 0.3s ease;
+}
+
+.floating-buttons a img:hover {
+  transform: scale(1.2);
+}
+
+/* Animação suave das seções */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
